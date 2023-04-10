@@ -44,7 +44,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.from(".future__subtitle", {
   scrollTrigger: {
     trigger: ".future__subtitle",
-    toggleActions: "restart none none none",
+    toggleActions: "play none none none",
     start: "top center",
   },
   y: -50,
@@ -55,7 +55,7 @@ gsap.from(".future__subtitle", {
 gsap.from(".future__card", {
   scrollTrigger: {
     trigger: ".future__card",
-    toggleActions: "restart none none none",
+    toggleActions: "play none none none",
     start: "top center",
   },
   x: -100,
@@ -65,7 +65,7 @@ gsap.from(".future__card", {
 gsap.from(".future__card-bg img", {
   scrollTrigger: {
     trigger: ".future__card-bg img",
-    toggleActions: "restart none none none",
+    toggleActions: "play none none none",
     start: "center center",
   },
   x: 500,
