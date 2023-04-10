@@ -1,0 +1,26 @@
+@use "./../abstacts/_functions.scss" as *;
+@use "./../abstacts/mixins" as *;
+
+.banner {
+  z-index: 4;
+  width: 100%;
+
+  &__content {
+    z-index: 4;
+    text-align: center;
+    padding-top: #{rem(128)};
+    padding-bottom: #{rem(165)};
+  }
+
+  &__buttons {
+    --flow-spacer: #{rem(32)};
+    display: inline-flex;
+    gap: #{rem(10)};
+
+    .btn {
+      min-width: #{rem(144)};
+      height: #{rem(52)};
+      padding: #{rem(14)};
+    }
+  }
+}

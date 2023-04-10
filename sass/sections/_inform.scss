@@ -1,0 +1,54 @@
+@use "./../abstacts/functions" as *;
+@use "./../abstacts/mixins" as *;
+
+.inform {
+  --margin-top: #{rem(90)};
+
+  &__card {
+    text-align: center;
+
+    @include mq(medium) {
+      text-align: start;
+      p {
+        max-width: 50ch;
+      }
+    }
+  }
+
+  &__card:last-child {
+    --flow-spacer: #{rem(48)};
+
+    p {
+      --flow-spacer: #{rem(16)};
+    }
+  }
+
+  &__card-bg {
+    display: flex;
+    justify-content: center;
+
+    img,
+    picture {
+      max-width: 100%;
+    }
+
+    img {
+      margin-right: 0;
+    }
+
+    .row {
+      gap: #{rem(20)};
+    }
+
+    @include mq(medium) {
+      img {
+        margin-right: #{rem(384)};
+      }
+
+      img,
+      picture {
+        max-width: none;
+      }
+    }
+  }
+}

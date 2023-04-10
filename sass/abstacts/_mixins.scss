@@ -1,0 +1,55 @@
+$breakpoints: (
+  small: 24em,
+  medium: 48em,
+  large: 90em,
+);
+
+// media query
+
+@mixin mq($key) {
+  $size: map-get($breakpoints, $key);
+
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin media($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+// grid columns
+
+// grid
+$grid-columns: 12 !default;
+$grid-gap: 30px !default;
+$grid-gap-side: $grid-gap / 2 !default;
+
+// breakpoints
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+
+@mixin row {
+  display: flex;
+  flex-wrap: wrap;
+  // margin-left: - v.$grid-gap-side;
+  // margin-right: - v.$grid-gap-side;
+  gap: $grid-gap-side;
+  // > * {
+  //   gap: 1rem;
+  // }
+}
+
+@mixin col($size) {
+  flex: 1 0 auto;
+  width: calc((#{percentage($size / $grid-columns)}) - #{$grid-gap});
+}

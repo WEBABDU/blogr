@@ -1,0 +1,5 @@
+@use "./../abstacts/_functions.scss" as *;
+
+.flow > * + *{
+    margin-top: var(--flow-spacer, #{rem(16)});
+}

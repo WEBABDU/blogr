@@ -1,0 +1,19 @@
+@use "./../abstacts/mixins" as m;
+
+.row {
+  @include m.row;
+}
+
+.col {
+  flex: 1 0 0%;
+}
+
+@each $bp, $width in m.$grid-breakpoints {
+  @include m.media($width) {
+    @for $i from 1 through m.$grid-columns {
+      .col-#{$bp}-#{$i} {
+        @include m.col($i);
+      }
+    }
+  }
+}

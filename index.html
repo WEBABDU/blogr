@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogr</title>
+    <link rel="stylesheet" href="/sass/style.scss" />
+  </head>
+  <body>
+    <div class="hero__bg | position-relative">
+      <header class="header | container position-relative">
+        <div class="header__wrapper | position-relative">
+          <a href="/" class="logo">
+            <img src="/images/logo.svg" alt="logo" />
+          </a>
+          <nav class="navbar">
+            <ul role="list" class="menu">
+              <li class="menu__item">
+                <a href="#" class="menu__link | clr-neutral-200">
+                  Product
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+                    <path
+                      fill="none"
+                      stroke="#FFF"
+                      stroke-width="2"
+                      opacity=".75"
+                      d="M1 1l4 4 4-4"
+                    />
+                  </svg>
+                </a>
+                <div class="menu__sub-links">
+                  <a href="#" class="menu__sub-link">Overview </a>
+                  <a href="#" class="menu__sub-link">Pricing</a>
+                  <a href="#" class="menu__sub-link"> Marketplace</a>
+                  <a href="#" class="menu__sub-link">Features</a>
+                  <a href="#" class="menu__sub-link">Integrations</a>
+                </div>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link | clr-neutral-200">
+                  Company
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+                    <path
+                      fill="none"
+                      stroke="#FFF"
+                      stroke-width="2"
+                      opacity=".75"
+                      d="M1 1l4 4 4-4"
+                    />
+                  </svg>
+                </a>
+
+                <div class="menu__sub-links">
+                  <a href="#" class="menu__sub-link">About </a>
+                  <a href="#" class="menu__sub-link">Team</a>
+                  <a href="#" class="menu__sub-link"> Blog</a>
+                  <a href="#" class="menu__sub-link">Careers</a>
+                </div>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link | clr-neutral-200">
+                  Connect
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7">
+                    <path
+                      fill="none"
+                      stroke="#FFF"
+                      stroke-width="2"
+                      opacity=".75"
+                      d="M1 1l4 4 4-4"
+                    />
+                  </svg>
+                </a>
+
+                <div class="menu__sub-links">
+                  <a href="#" class="menu__sub-link">Contact </a>
+                  <a href="#" class="menu__sub-link">Newsletter</a>
+                  <a href="#" class="menu__sub-link"> LinkedIn</a>
+                </div>
+              </li>
+            </ul>
+            <div class="buttons">
+              <button class="btn" data-type="naked">Login</button>
+              <button class="btn">Sign Up</button>
+            </div>
+          </nav>
+          <button
+            class="navbar__toggle-btn"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+          ></button>
+        </div>
+      </header>
+      <!-- Header -->
+
+      <section class="banner | position-relative">
+        <div class="container">
+          <div class="banner__content | flow position-relative">
+            <h1 class="banner__subtitle">A modern publishing platform</h1>
+            <p class="banner__description | clr-neutral-100">
+              Grow your audience and build your online brand
+            </p>
+            <div class="banner__buttons">
+              <div class="btn">Start for Free</div>
+              <div class="btn" data-type="naked-with-border">Learn More</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Banner -->
+
+    </div>
+    <!-- Hero -->
+
+    <main>
+      <section class="future | position-relative margin-top">
+        <h2 class="future__subtitle | text-align-center">
+          Designed for the future
+        </h2>
+        <div class="container">
+          <div class="future__content | row align-items-center">
+            <div class="flow col-lg-6 col-md-6 col-xs-12">
+              <div class="future__card | flow">
+                <h3>Introducing an extensible editor</h3>
+                <p style="--flow-spacer: 1rem">
+                  Blogr features an exceedingly intuitive interface which lets
+                  you focus on one thing: creating content. The editor supports
+                  management of multiple blogs and allows easy manipulation of
+                  embeds such as images, videos, and Markdown. Extensibility
+                  with plugins and themes provide easy ways to add functionality
+                  or change the looks of a blog.
+                </p>
+              </div>
+              <div class="future__card | flow" style="--flow-spacer: 2.5rem">
+                <h3>Robust content management</h3>
+                <p style="--flow-spacer: 1rem">
+                  Flexible content management enables users to easily move
+                  through posts. Increase the usability of your blog by adding
+                  customized categories, sections, format, or flow. With this
+                  functionality, you’re in full control.
+                </p>
+              </div>
+            </div>
+            <div class="future__card-bg | col-lg-6 col-md-6 col-xs-12">
+              <picture>
+                <source
+                  media="(max-width: 768px)"
+                  srcset="/images/illustration-editor-mobile.svg"
+                />
+                <img src="/images/illustration-editor-desktop.svg" alt="" />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Future -->
+
+      <section class="art | position-relative margin-top">
+        <div class="container position-relative">
+          <div class="art__content">
+            <div class="art__image">
+              <img src="/images/illustration-phones.svg" alt="phones" />
+            </div>
+            <div class="art__description | flow">
+              <h2>State of the Art Infrastructure</h2>
+              <p>
+                With reliability and speed in mind, worldwide data centers
+                provide the backbone for ultra-fast connectivity. This ensures
+                your site will load instantly, no matter where your readers are,
+                keeping your site competitive.
+              </p>
+            </div>
+            <div class="art__bg-img">
+              <img src="/images/bg-pattern-circles.svg" alt="circles" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Art -->
+
+      <section class="inform | margin-top">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="inform__card-bg col-lg-6 col-md-6 col-xs-12">
+              <picture>
+                <source
+                  media="(max-width: 768px)"
+                  srcset="/images/illustration-laptop-mobile.svg"
+                />
+                <img src="/images/illustration-laptop-desktop.svg" alt="" />
+              </picture>
+            </div>
+            <div class="flow col-lg-6 col-md-6 col-xs-12">
+              <div class="inform__card | flow">
+                <h3>Free, open, simple</h3>
+                <p>
+                  Blogr is a free and open source application backed by a large
+                  community of helpful developers. It supports features such as
+                  code syntax highlighting, RSS feeds, social media integration,
+                  third-party commenting tools, and works seamlessly with Google
+                  Analytics. The architecture is clean and is relatively easy to
+                  learn.
+                </p>
+              </div>
+              <div class="inform__card | flow">
+                <h3>Powerful tooling</h3>
+                <p>
+                  Batteries included. We built a simple and straightforward CLI
+                  tool that makes customization and deployment a breeze, but
+                  capable of producing even the most complicated sites.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Inform -->
+    </main>
+
+    <footer class="footer | margin-top bg-neutral-400">
+      <div class="container">
+        <div class="footer__content | row">
+          <div class="col-lg-3 col-md-3 col-xs-12">
+            <a href="/" class="logo">
+              <img src="/images/logo.svg" alt="logo" />
+            </a>
+          </div>
+          <div class="flow col-lg-3 col-md-3 col-xs-12">
+            <span>Product</span>
+            <ul role="list" class="product footer__list | flow">
+              <li class="product__item">
+                <a href="#" class="product__link">Overview</a>
+              </li>
+              <li class="product__item">
+                <a href="#" class="product__link">Pricing</a>
+              </li>
+              <li class="product__item">
+                <a href="#" class="product__link">Marketplace</a>
+              </li>
+              <li class="product__item">
+                <a href="#" class="product__link">Features</a>
+              </li>
+              <li class="product__item">
+                <a href="#" class="product__link">Integrations</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flow col-lg-3 col-md-3 col-xs-12">
+            <span>Company</span>
+            <ul role="list" class="company footer__list | flow">
+              <li class="company__item">
+                <a href="#" class="company__link"> About </a>
+              </li>
+              <li class="company__item">
+                <a href="#" class="company__link">Team</a>
+              </li>
+              <li class="company__item">
+                <a href="#" class="company__link">Blog</a>
+              </li>
+              <li class="company__item">
+                <a href="#" class="company__link">Careers</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flow col-lg-3 col-md-3 col-xs-12">
+            <span>Connect</span>
+            <ul role="list" class="connect footer__list | flow">
+              <li class="connect__item">
+                <a href="#" class="connect__link">Contact</a>
+              </li>
+              <li class="connect__item">
+                <a href="#" class="connect__link">Newsletter</a>
+              </li>
+              <li class="connect__item">
+                <a href="#" class="connect__link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="./main.js" type="module"></script>
+</html>

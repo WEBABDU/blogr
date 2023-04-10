@@ -1,0 +1,49 @@
+@use "./../abstacts/functions" as *;
+@use "./../abstacts/mixins" as *;
+
+.future {
+  --margin-top: #{rem(60)};
+  overflow-x: hidden;
+
+  &__subtitle {
+    position: initial;
+    margin-bottom: #{rem(32)};
+
+    @include mq(medium) {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__content {
+    --flow-spacer: #{rem(32)};
+    flex-wrap: wrap-reverse;
+    gap: #{rem(32)};
+  }
+
+  &__card {
+    text-align: center;
+
+    @include mq(medium) {
+      text-align: start;
+    }
+  }
+
+  &__card-bg {
+    display: flex;
+    justify-content: center;
+
+    img,
+    picture {
+      max-width: none;
+    }
+
+    @include mq(medium) {
+      picture {
+        max-width: 100%;
+      }
+    }
+  }
+}

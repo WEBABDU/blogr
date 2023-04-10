@@ -1,0 +1,82 @@
+@use "./../abstacts/colors" as *;
+@use "./../abstacts/_type-scale" as *;
+@use "./../abstacts/font-familyes" as *;
+@use "./../abstacts/font-weights" as *;
+@use "./../abstacts/_mixins" as *;
+@use "./../abstacts/functions" as *;
+
+:root {
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  @each $font, $value in $fonts {
+    --#{$font}: "#{$value}";
+  }
+
+  @each $fw, $value in $font-weights {
+    --fw-#{$value}: #{$value};
+  }
+
+  @each $screen-size, $font-size in $type-scale {
+    @if $screen-size == small {
+      @each $size, $value in $font-size {
+        --fs-#{$size}: #{$value};
+      }
+    } @else {
+      @include mq(small) {
+        @each $size, $value in $font-size {
+          --fs-#{$size}: #{$value};
+        }
+      }
+    }
+  }
+}
+
+body {
+  font-size: var(--fs-400);
+  color: var(--clr-neutral-300);
+  font-family: var(--primary-ff), sans-serif;
+  font-weight: var(--fw-300);
+  line-height: 1.3;
+}
+
+// container
+.container {
+  --max-width: #{rem(1150)};
+  --container-padding: #{rem(20)};
+  width: 100%;
+  width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+  margin-inline: auto;
+}
+
+// utility
+
+.position-relative {
+  position: relative;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.margin-top {
+  margin-top: var(--margin-top, #{rem(16)});
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .clr-#{$color}-#{$shade} {
+      color: #{$value};
+    }
+    .bg-#{$color}-#{$shade} {
+      background-color: #{$value};
+    }
+  }
+}

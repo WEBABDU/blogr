@@ -1,0 +1,9 @@
+@use "sass:math";
+
+@function rem($pixel) {
+  @return math.div($pixel, 16) + rem;
+}
+
+@function vw($bp, $size) {
+  @return math.div($size, $bp) * 100 + vw;
+};
